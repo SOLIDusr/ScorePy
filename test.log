@@ -56,3 +56,212 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 372-002-383
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 372-002-383
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 372-002-383
+INFO:root:
+('basta@gmail.com\n',
+ 'aezakmi')
+INFO:root:
+('basta@gmail.com\n',
+ 'aezakmi')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('britva@yandex.ua',
+ 'aertsbvgs')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('yandex@yandex.uk',
+ 'ebrtb')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('google@yandex.ty',
+ 'sdf')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('@yandex.uk@yandex.uk',
+ 'qwrv')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:root:
+('basta@gmail.com\n',
+ 'aezakmi')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('britva@yandex.ua',
+ 'aertsbvgs')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('yandex@yandex.uk',
+ 'ebrtb')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('google@yandex.ty',
+ 'sdf')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('@yandex.uk@yandex.uk',
+ 'qwrv')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 372-002-383
+INFO:root:
+('basta@gmail.com\n',
+ 'aezakmi')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('britva@yandex.ua',
+ 'aertsbvgs')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('yandex@yandex.uk',
+ 'ebrtb')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('google@yandex.ty',
+ 'sdf')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('@yandex.uk@yandex.uk',
+ 'qwrv')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\app.py", line 21, in mainPage
+    return render_template("mainPage.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: mainPage.html
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 15:39:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\app.py", line 21, in mainPage
+    return render_template("mainPage.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ScorePy\ScorePy\src\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: mainPage.html
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 15:39:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 15:39:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 15:39:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

@@ -48,7 +48,7 @@ class Psql:
                 self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
             return self.cursor_.fetchone()
 
-        def insert(self,rows: str ,*args):
+        def insert(self, rows: str, *args):
             self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES ({args})""")
             return None
 
@@ -94,3 +94,6 @@ class Psql:
 
         def getCursor(self):
             return self.dataBase.cursor()
+
+
+db = Psql()

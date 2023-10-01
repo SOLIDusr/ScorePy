@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, session, make_response
 from requesto import Requesto
 import utils.logs as logger
+from utils import registrationHandler
+from utils.loginHandler import loggingIn
+from utils.registrationHandler import registration
 
-db = Requesto.Psql()
+db = Requesto.db
+
 
 app = Flask(__name__)
-
+registrationHandler.registration("log","email", "pass")
 
 @app.route('/', methods=['POST', 'GET'])
 def mainPage():
@@ -20,7 +24,9 @@ def mainPage():
 @app.route('/signIn', methods=['POST', 'GET'])
 def signIn():
     if request.method == "POST":
-        pass
+        login = request.form['login']
+        password = request.form['password']
+        response = loggingIn(login, password)
     else:
         return render_template("loginPage.html")
 
@@ -28,7 +34,9 @@ def signIn():
 @app.route('/signUp', methods=['POST', 'GET'])
 def signUp():
     if request.method == "POST":
-        pass
+        login = request.form['login']
+        password = request.form['password']
+        response = registration(login, password)
     else:
         return render_template("registerPage.html")
 
@@ -41,4 +49,4 @@ def landing():
         return render_template("landing.html")
 
 
-app.run(debug=True)
+app.run(debug=False)
