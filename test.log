@@ -265,3 +265,51 @@ jinja2.exceptions.TemplateNotFound: mainPage.html
 INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 15:39:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
 INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 15:39:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [01/Oct/2023 15:39:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:
+('reply.naromori@gmail.com',
+ 'naromori')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('orex_80@bk.ru',
+ 'Ak1ry')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:root:
+('83.220.170.127',
+ 'dolta')
+INFO:root:email
+INFO:root:pass
+INFO:root:email
+INFO:root:pass
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:
+('reply.naromori@gmail.com',
+ 'naromori')
+INFO:root:reply.naromori@gmail.com
+INFO:root:naromori
+INFO:root:
+('orex_80@bk.ru',
+ 'Ak1ry')
+INFO:root:orex_80@bk.ru
+INFO:root:Ak1ry
+INFO:root:
+('83.220.170.127',
+ 'dolta')
+INFO:root:83.220.170.127
+INFO:root:dolta
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:('reply.naromori@gmail.com',)
+INFO:root:('orex_80@bk.ru',)
+INFO:root:('83.220.170.127',)
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m

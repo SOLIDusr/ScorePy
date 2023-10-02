@@ -15,49 +15,64 @@ class Psql:
             self.name_: str = name
             self.cursor_: pg.cursor = cursor
 
-        def returnAll(self, prop: str | None = None, propWhere: str | None = None) -> list | Exception:
-            if prop is None and propWhere is None:
-                self.cursor_.execute(f"""SELECT * FROM {self.name_}""")
-            if prop is None and propWhere is not None:
-                self.cursor_.execute(f"""SELECT * FROM {self.name_} WHERE {propWhere}""")
-            if prop is not None and propWhere is None:
-                self.cursor_.execute(f"""SELECT {prop} FROM {self.name_}""")
-            if prop is not None and propWhere is not None:
-                self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
-            return self.cursor_.fetchall()
+        def returnAll(self, prop: str | None = None, propWhere: str | None = None) -> list:
+            try:
+                if prop is None and propWhere is None:
+                    self.cursor_.execute(f"""SELECT * FROM {self.name_}""")
+                if prop is None and propWhere is not None:
+                    self.cursor_.execute(f"""SELECT * FROM {self.name_} WHERE {propWhere}""")
+                if prop is not None and propWhere is None:
+                    self.cursor_.execute(f"""SELECT {prop} FROM {self.name_}""")
+                if prop is not None and propWhere is not None:
+                    self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
+                return self.cursor_.fetchall()
+            except Exception:
+                return []
 
-        def returnMany(self, size: int, propWhere: str | None = None, prop: str | None = None) -> list | Exception:
-            if prop is None and propWhere is None:
-                self.cursor_.execute(f"""SELECT * FROM {self.name_}""")
-            if prop is None and propWhere is not None:
-                self.cursor_.execute(f"""SELECT * FROM {self.name_} WHERE {propWhere}""")
-            if prop is not None and propWhere is None:
-                self.cursor_.execute(f"""SELECT {prop} FROM {self.name_}""")
-            if prop is not None and propWhere is not None:
-                self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
-            return self.cursor_.fetchmany(size=size)
+        def returnMany(self, size: int, propWhere: str | None = None, prop: str | None = None) -> list:
+            try:
+                if prop is None and propWhere is None:
+                    self.cursor_.execute(f"""SELECT * FROM {self.name_}""")
+                if prop is None and propWhere is not None:
+                    self.cursor_.execute(f"""SELECT * FROM {self.name_} WHERE {propWhere}""")
+                if prop is not None and propWhere is None:
+                    self.cursor_.execute(f"""SELECT {prop} FROM {self.name_}""")
+                if prop is not None and propWhere is not None:
+                    self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
+                return self.cursor_.fetchmany(size=size)
+            except Exception:
+                return []
 
-        def returnOne(self, propWhere: str | None = None, prop: str | None = None) -> list | Exception:
-            if prop is None and propWhere is None:
-                self.cursor_.execute(f"""SELECT * FROM {self.name_}""")
-            if prop is None and propWhere is not None:
-                self.cursor_.execute(f"""SELECT * FROM {self.name_} WHERE {propWhere}""")
-            if prop is not None and propWhere is None:
-                self.cursor_.execute(f"""SELECT {prop} FROM {self.name_}""")
-            if prop is not None and propWhere is not None:
-                self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
-            return self.cursor_.fetchone()
+        def returnOne(self, propWhere: str | None = None, prop: str | None = None) -> list:
+            try:
+                if prop is None and propWhere is None:
+                    self.cursor_.execute(f"""SELECT * FROM {self.name_}""")
+                if prop is None and propWhere is not None:
+                    self.cursor_.execute(f"""SELECT * FROM {self.name_} WHERE {propWhere}""")
+                if prop is not None and propWhere is None:
+                    self.cursor_.execute(f"""SELECT {prop} FROM {self.name_}""")
+                if prop is not None and propWhere is not None:
+                    self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
+                return self.cursor_.fetchone()
+            except Exception:
+                return []
 
-        def insert(self, rows: str, *args):
-            self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES ({args})""")
-            return None
+        def insert(self, rows: str, args: str) -> bool:
+            try:
+                self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES ({args})""")
+                return True
+            except Exception:
+                return False
 
-        def update(self, setters: str, equals: str, whers: str = None):
-            if whers is None:
-                self.cursor_.execute(f"""UPDATE {self.name_} SET {setters} = {equals}""")
-                return None
-            self.cursor_.execute(f"""UPDATE {self.name_} SET {setters} = {equals} WHERE {whers}""")
-            return None
+        def update(self, setters: str, equals: str, whers: str = None) -> bool:
+            try:
+                if whers is None:
+                    self.cursor_.execute(f"""UPDATE {self.name_} SET {setters} = {equals}""")
+                    return None
+                self.cursor_.execute(f"""UPDATE {self.name_} SET {setters} = {equals} WHERE {whers}""")
+                return True
+            except Exception:
+                return False
 
     class Connection:
         def __init__(

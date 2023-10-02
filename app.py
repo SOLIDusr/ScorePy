@@ -7,9 +7,8 @@ from utils.registrationHandler import registration
 
 db = Requesto.db
 
-
 app = Flask(__name__)
-registrationHandler.registration("log","email", "pass")
+
 
 @app.route('/', methods=['POST', 'GET'])
 def mainPage():
@@ -36,7 +35,11 @@ def signUp():
     if request.method == "POST":
         login = request.form['login']
         password = request.form['password']
-        response = registration(login, password)
+        email = request.form['email']
+        response = registration(login, email, password)
+        if response != 0:
+            pass
+
     else:
         return render_template("registerPage.html")
 
