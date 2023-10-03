@@ -313,3 +313,96 @@ INFO:root:('83.220.170.127',)
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:
+-6
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+CRITICAL:root:Traceback (most recent call last):
+  File "/home/naromori/GitHub/ScorePy/requesto/Requesto.py", line 70, in insert
+    self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES ({args})""")
+psycopg2.errors.SyntaxError: syntax error at or near ","
+LINE 1: ...in, password, email) VALUES (St1zy3, AcrobaTick14@, bastardc...
+                                                             ^
+
+
+INFO:root:
+-6
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+CRITICAL:root:Traceback (most recent call last):
+  File "/home/naromori/GitHub/ScorePy/requesto/Requesto.py", line 70, in insert
+    self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES ({args})""")
+psycopg2.errors.SyntaxError: syntax error at or near ","
+LINE 1: ...gin, password, email) VALUES (St1zy3,AcrobaTick14@,bastardco...
+                                                             ^
+
+
+INFO:root:
+-6
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+CRITICAL:root:Traceback (most recent call last):
+  File "/home/naromori/GitHub/ScorePy/requesto/Requesto.py", line 72, in insert
+    self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES """ + args)
+psycopg2.errors.SyntaxError: syntax error at or near "St1zy3"
+LINE 1: ...ERT INTO userdata (login, password, email) VALUES St1zy3,Acr...
+                                                             ^
+
+
+INFO:root:
+-6
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+CRITICAL:root:Traceback (most recent call last):
+  File "/home/naromori/GitHub/ScorePy/requesto/Requesto.py", line 72, in insert
+    self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES """ + "'" + args + "'")
+psycopg2.errors.SyntaxError: syntax error at or near "'St1zy3,AcrobaTick14@,bastardcom1@gmail.com'"
+LINE 1: ...ERT INTO userdata (login, password, email) VALUES 'St1zy3,Ac...
+                                                             ^
+
+
+INFO:root:
+-6
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:
+0
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:
+0
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:
+None
+INFO:root:
+0
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:
+<cursor object at 0x7f535d9a6a70; closed: 0>
+INFO:root:
+<class 'psycopg2.extensions.cursor'>
+INFO:root:
+<cursor object at 0x7f46b0ac2a70; closed: 0>
+INFO:root:
+<class 'psycopg2.extensions.cursor'>
+INFO:root:
+<cursor object at 0x7f1bc251a980; closed: 0>
+INFO:root:
+<class 'psycopg2.extensions.cursor'>
+INFO:root:
+<cursor object at 0x7f6f53b2e980; closed: 0>
+INFO:root:
+<class 'psycopg2.extensions.cursor'>

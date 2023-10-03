@@ -1,11 +1,13 @@
 from dbCfg import *
 import psycopg2 as pg
+import traceback
+import utils.logs as logger
 
 
 class Psql:
     def __init__(self):
         self.conn: Psql.Connection = Psql.Connection()
-        self.cursor: pg.cursor = self.conn.getCursor()
+        self.cursor = self.conn.getCursor()
 
     def newTable(self, name: str, cursor):
         return self.Table(cursor, name)
@@ -26,7 +28,9 @@ class Psql:
                 if prop is not None and propWhere is not None:
                     self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
                 return self.cursor_.fetchall()
-            except Exception:
+            except Exception as ex:
+                trace = traceback.format_exc()
+                logger.crit(trace)
                 return []
 
         def returnMany(self, size: int, propWhere: str | None = None, prop: str | None = None) -> list:
@@ -40,7 +44,10 @@ class Psql:
                 if prop is not None and propWhere is not None:
                     self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
                 return self.cursor_.fetchmany(size=size)
-            except Exception:
+
+            except Exception as ex:
+                trace = traceback.format_exc()
+                logger.crit(trace)
                 return []
 
         def returnOne(self, propWhere: str | None = None, prop: str | None = None) -> list:
@@ -54,24 +61,31 @@ class Psql:
                 if prop is not None and propWhere is not None:
                     self.cursor_.execute(f"""SELECT {prop} FROM {self.name_} WHERE {propWhere}""")
                 return self.cursor_.fetchone()
-            except Exception:
+            except Exception as ex:
+                trace = traceback.format_exc()
+                logger.crit(trace)
                 return []
 
         def insert(self, rows: str, args: str) -> bool:
+
             try:
-                self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES ({args})""")
+                self.cursor_.execute(f"""INSERT INTO {self.name_} ({rows}) VALUES """ + args)
                 return True
-            except Exception:
+            except Exception as ex:
+                trace = traceback.format_exc()
+                logger.crit(trace)
                 return False
 
         def update(self, setters: str, equals: str, whers: str = None) -> bool:
             try:
                 if whers is None:
                     self.cursor_.execute(f"""UPDATE {self.name_} SET {setters} = {equals}""")
-                    return None
+                    return True
                 self.cursor_.execute(f"""UPDATE {self.name_} SET {setters} = {equals} WHERE {whers}""")
                 return True
-            except Exception:
+            except Exception as ex:
+                trace = traceback.format_exc()
+                logger.crit(trace)
                 return False
 
     class Connection:

@@ -30,6 +30,4 @@ def registration(providedLogin: str, providedEmail: str, providedPassword: str) 
     elif re.search('[A-Z]', providedPassword) is None:
         return -53
 
-    if not(userdata.insert(rows="login, password, email", args=f"{providedLogin}, {providedPassword}, {providedEmail}")):
-        return -6
     return 0

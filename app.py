@@ -10,6 +10,9 @@ db = Requesto.db
 app = Flask(__name__)
 
 
+logger.data(registration("St1zy3", "bastardcom1@gmail.com", "AcrobaTick14@"))
+
+
 @app.route('/', methods=['POST', 'GET'])
 def mainPage():
     if request.method == "POST":
